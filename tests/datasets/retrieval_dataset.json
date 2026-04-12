@@ -1,0 +1,45 @@
+[
+  { "group": "send", "query": "What SEND support do you offer?", "expected_url_contains": "copy-of-send-after-school-club" },
+  { "group": "send", "query": "Can you tell me about your SEND support for children?", "expected_url_contains": "copy-of-send-after-school-club" },
+  { "group": "send", "query": "Do you provide support for special educational needs and disabilities?", "expected_url_contains": "copy-of-send-after-school-club" },
+
+  { "group": "tutoring", "query": "Do you offer tutoring for children?", "expected_url_contains": "copy-of-tutoring-1" },
+  { "group": "tutoring", "query": "Can you tell me about your tutoring and mentoring support?", "expected_url_contains": "copy-of-tutoring-1" },
+  { "group": "tutoring", "query": "What subjects do you cover in tutoring?", "expected_url_contains": "copy-of-tutoring-1" },
+
+  { "group": "homeschooling", "query": "Can you tell me about your online homeschooling?", "expected_url_contains": "copy-of-homeschooling-1" },
+  { "group": "homeschooling", "query": "What is the Homeschooling Hub?", "expected_url_contains": "copy-of-homeschooling-1" },
+  { "group": "homeschooling", "query": "What does your Homeschooling Hub offer?", "expected_url_contains": "copy-of-homeschooling-1" },
+
+  { "group": "talks_speech", "query": "Can you tell me about your talks and keynote speech services?", "expected_url_contains": "copy-of-after-school-activities" },
+  { "group": "talks_speech", "query": "Do you offer talks and workshops for events?", "expected_url_contains": "copy-of-after-school-activities" },
+  { "group": "talks_speech", "query": "Can someone from BF4A give a keynote speech?", "expected_url_contains": "copy-of-after-school-activities" },
+
+  { "group": "holiday_clubs", "query": "What are your holiday clubs?", "expected_url_contains": "holiday-clubs" },
+  { "group": "holiday_clubs", "query": "Are your holiday clubs free?", "expected_url_contains": "holiday-clubs" },
+  { "group": "holiday_clubs", "query": "Can you tell me about your holiday clubs for children?", "expected_url_contains": "holiday-clubs" },
+
+  { "group": "leadership_programme", "query": "Can you tell me about the youth leadership programme?", "expected_url_contains": "youth-leadership" },
+  { "group": "leadership_programme", "query": "What is your leadership and advocacy programme?", "expected_url_contains": "youth-leadership" },
+  { "group": "leadership_programme", "query": "How does the leadership programme support young people?", "expected_url_contains": "youth-leadership" },
+
+  { "group": "odd_girl_in", "query": "Can you tell me about Odd Girl In?", "expected_url_contains": "youth-leadership" },
+  { "group": "odd_girl_in", "query": "What is the Odd Girl In club?", "expected_url_contains": "youth-leadership" },
+  { "group": "odd_girl_in", "query": "Do you run Odd Girl In for girls?", "expected_url_contains": "youth-leadership" },
+
+  { "group": "workshops", "query": "Can you tell me about your workshops?", "expected_url_contains": "copy-of-after-school-activities" },
+  { "group": "workshops", "query": "Do you run workshops for schools or communities?", "expected_url_contains": "copy-of-after-school-activities" },
+  { "group": "workshops", "query": "What workshops do you offer?", "expected_url_contains": "copy-of-after-school-activities" },
+
+  { "group": "international_youth_exchange_programme", "query": "Can you tell me about the international youth exchange programme?", "expected_url_contains": "holiday-clubs" },
+  { "group": "international_youth_exchange_programme", "query": "What is the international summer school programme?", "expected_url_contains": "holiday-clubs" },
+  { "group": "international_youth_exchange_programme", "query": "How did the international youth exchange programme work?", "expected_url_contains": "holiday-clubs" },
+
+  { "group": "grass2grades", "query": "Can you tell me about Grass2Grades?", "expected_url_contains": "send-after-school-club" },
+  { "group": "grass2grades", "query": "What is the Grass2Grades programme?", "expected_url_contains": "send-after-school-club" },
+  { "group": "grass2grades", "query": "How does Grass2Grades combine sport and maths learning?", "expected_url_contains": "send-after-school-club" },
+
+  { "group": "cultural_trips", "query": "Can you tell me about the cultural trips you offer?", "expected_url_contains": "copy-of-send-after-school-club" },
+  { "group": "cultural_trips", "query": "Do children take part in cultural trips and outdoor learning?", "expected_url_contains": "copy-of-send-after-school-club" },
+  { "group": "cultural_trips", "query": "What do you do on cultural trips?", "expected_url_contains": "copy-of-send-after-school-club" }
+]

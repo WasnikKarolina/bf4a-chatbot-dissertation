@@ -1,0 +1,14 @@
+[
+  { "query": "summarise the home page", "expected_url": "https://www.brightfutures4all.com/" },
+  { "query": "can you summarise the home page for me", "expected_url": "https://www.brightfutures4all.com/" },
+  { "query": "summarise the donate page", "expected_url": "https://www.brightfutures4all.com/donate" },
+  { "query": "summarize the donate page", "expected_url": "https://www.brightfutures4all.com/donate" },
+  { "query": "summary of the donate page", "expected_url": "https://www.brightfutures4all.com/donate" },
+  { "query": "summary of the volounteers and vacancies page", "expected_url": "https://www.brightfutures4all.com/projects-3" },
+  { "query": "summarise the volounteers and vacancies page", "expected_url": "https://www.brightfutures4all.com/projects-3" },
+  { "query": "can you summarise the tutors mentors and therapists page", "expected_url": "https://www.brightfutures4all.com/copy-of-tutoring-1" },
+  { "query": "summarise the tutors mentors and therapists page", "expected_url": "https://www.brightfutures4all.com/copy-of-tutoring-1" },
+  { "query": "summarise the homeschooling page", "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1" },
+  { "query": "summarise the home schooling page", "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1" },
+  { "query": "please summarise the home schooling page", "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1" }
+]

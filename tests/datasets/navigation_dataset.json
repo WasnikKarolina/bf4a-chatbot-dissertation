@@ -1,0 +1,34 @@
+{
+  "positive": [
+    { "query": "open the donate page", "expected_url": "https://www.brightfutures4all.com/donate" },
+    { "query": "show me the contact page", "expected_url": "https://www.brightfutures4all.com/contact-10" },
+    { "query": "open the report page", "expected_url": "https://www.brightfutures4all.com/" },
+    { "query": "open the home page", "expected_url": "https://www.brightfutures4all.com/" },
+    { "query": "open the photo gallery page", "expected_url": "https://www.brightfutures4all.com/general-clean" },
+    { "query": "open the policies page", "expected_url": "https://www.brightfutures4all.com/general-5" },
+    { "query": "open the after school activities page", "expected_url": "https://www.brightfutures4all.com/copy-of-send-after-school-club" },
+    { "query": "open the holiday clubs page", "expected_url": "https://www.brightfutures4all.com/holiday-clubs" },
+    { "query": "open the homeschooling page", "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1" },
+    { "query": "open the vacancies page", "expected_url": "https://www.brightfutures4all.com/projects-3" },
+    { "query": "show me the curriculum page", "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1" },
+    { "query": "take me to the about page", "expected_url": "https://www.brightfutures4all.com/" },
+    { "query": "open the team page", "expected_url": "https://www.brightfutures4all.com/copy-of-meet-our-team-trustees" },
+    { "query": "show me the donate page", "expected_url": "https://www.brightfutures4all.com/donate" },
+    { "query": "open the register page", "expected_url": "https://app.teachngo.com/leads/add/11035" },
+    { "query": "show me the newsletters page", "expected_url": "https://www.brightfutures4all.com/blog" }
+  ],
+  "negative": [
+    { "query": "how can i donate?" },
+    { "query": "what are your contact details?" },
+    { "query": "what is bf4a?" },
+    { "query": "do you offer tutoring?" },
+    { "query": "what is your privacy policy" },
+    { "query": "what are your newsletters about" },
+    { "query": "tell me about workshops" },
+    { "query": "what send support do you offer?" },
+    { "query": "do you sell concert tickets" },
+    { "query": "can you book me a hotel" },
+    { "query": "open the concert tickets page" },
+    { "query": "show me the pizza menu" }
+  ]
+}

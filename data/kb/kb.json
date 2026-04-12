@@ -1,0 +1,37 @@
+[
+  {
+    "id": "gift_aid",
+    "title": "Gift Aid",
+    "tags": ["gift aid", "giftaid", "tax", "uk taxpayer", "25p", "donation tax relief"],
+    "answer": "Gift Aid lets eligible UK taxpayers increase the value of a donation at no extra cost. When Gift Aid is applied, Bright Futures 4 All can claim an extra 25p for every GBP1 donated.",
+    "url": "https://www.brightfutures4all.com/donate"
+  },
+  {
+    "id": "mission",
+    "title": "Mission",
+    "tags": ["mission", "purpose", "aim", "aims", "goal", "goals"],
+    "answer": "Bright Futures 4 All supports children, young people, and families through inclusive education, wellbeing support, and development programmes that build confidence and opportunity.",
+    "url": "https://www.brightfutures4all.com/copy-of-about-us"
+  },
+ {
+  "id": "newsletters",
+  "title": "Newsletters and Updates",
+  "tags": ["newsletter", "newsletters", "blog", "read your newsletters", "view your newsletters", "see your newsletters", "updates", "latest updates", "recent posts"],
+  "answer": "BF4A shares updates, news and impact stories on the blog page. These posts highlight recent activities, programme developments, community events and examples of how the charity is supporting children, young people and families through its education and wellbeing initiatives. You can access them on the Newsletters page.",
+  "url": "https://www.brightfutures4all.com/blog"
+},
+{
+  "id": "photo_gallery",
+  "title": "Photo Gallery",
+  "tags": ["photo gallery", "gallery", "picture", "images", "view your images", "view the pictures", "see the photos", "photo", "photos", "pictures", "image gallery", "media gallery", "event photos"],
+  "answer": "The BF4A photo gallery shows images from activities, programmes and community events. It includes photos from holiday clubs, workshops, youth development activities and other projects that support children, young people and families. You can view the images on our Photo Gallery page.",
+  "url": "https://www.brightfutures4all.com/general-clean"
+},
+{
+  "id": "policies",
+  "title": "Policies",
+  "tags": ["policy", "policies", "privacy policy", "view your privacy policy", "view your policy", "see your policies", "view your privacy policy", "read your policies", "safeguarding policy", "policy documents", "governance"],
+  "answer": "The policies page contains BF4A’s key governance and safeguarding documents. These include policies related to safeguarding, privacy, equality and organisational procedures, helping ensure the charity operates safely, responsibly and transparently.You can access them on the Policies page.",
+  "url": "https://www.brightfutures4all.com/general-5"
+}
+]

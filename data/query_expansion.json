@@ -1,0 +1,21 @@
+{
+  "about": ["mission", "history", "who we are", "what we do", "purpose", "community hub", "registered charity"],
+  "mission": ["purpose", "aims", "what we do", "who we help", "support children", "community"],
+  "history": ["founded", "since", "years", "background", "story"],
+  "registered charity": ["charity number", "registered", "non-profit"],
+
+  "contact": ["email", "phone", "address", "get in touch", "message", "speak to someone", "call"],
+  "email": ["contact", "message", "get in touch"],
+  "phone": ["call", "contact number", "speak to someone"],
+
+  "tutoring": ["tutor", "mentoring", "one-to-one", "education support", "maths", "english", "science", "therapists", "therapy", "counselling"],
+  "tutor": ["tutoring", "mentoring", "one-to-one", "education support"],
+  "mentoring": ["tutor", "tutoring", "counselling", "support"],
+  "therapy": ["therapists", "counselling", "support"],
+  "counselling": ["therapy", "therapists", "support"],
+
+  "send": ["special educational needs", "neurodiverse", "additional needs", "send support"],
+  "neurodiverse": ["SEND", "additional needs", "support"],
+  "holiday clubs": ["school holidays", "free school meals", "activities", "kids holiday programme"],
+  "gift aid": ["tax relief", "uk taxpayer", "25p per pound", "donation uplift"]
+}

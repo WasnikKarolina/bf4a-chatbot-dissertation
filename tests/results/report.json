@@ -1,0 +1,1291 @@
+{
+  "score_definitions": {
+    "intent_confidence": "Classifier confidence returned by the intent model for a predicted label."
+  },
+  "intent_classification_performance": {
+    "total": 50,
+    "correct": 49,
+    "accuracy": 0.98,
+    "average_confidence": 0.699,
+    "average_confidence_correct": 0.707,
+    "average_confidence_incorrect": 0.318,
+    "min_confidence": 0.25,
+    "max_confidence": 0.984,
+    "rows": [
+      {
+        "query": "hello",
+        "expected_label": "HELLO",
+        "predicted_label": "HELLO",
+        "confidence": 0.435,
+        "matched": true
+      },
+      {
+        "query": "hi",
+        "expected_label": "HELLO",
+        "predicted_label": "HELLO",
+        "confidence": 0.812,
+        "matched": true
+      },
+      {
+        "query": "good morning",
+        "expected_label": "HELLO",
+        "predicted_label": "HELLO",
+        "confidence": 0.894,
+        "matched": true
+      },
+      {
+        "query": "what is bf4a",
+        "expected_label": "ABOUT_BF4A",
+        "predicted_label": "ABOUT_BF4A",
+        "confidence": 0.601,
+        "matched": true
+      },
+      {
+        "query": "tell me about bright futures 4 all",
+        "expected_label": "ABOUT_BF4A",
+        "predicted_label": "ABOUT_BF4A",
+        "confidence": 0.79,
+        "matched": true
+      },
+      {
+        "query": "what does bf4a do",
+        "expected_label": "ABOUT_BF4A",
+        "predicted_label": "ABOUT_BF4A",
+        "confidence": 0.802,
+        "matched": true
+      },
+      {
+        "query": "what is your purpose",
+        "expected_label": "ABOUT_BF4A",
+        "predicted_label": "ABOUT_BF4A",
+        "confidence": 0.515,
+        "matched": true
+      },
+      {
+        "query": "who are you",
+        "expected_label": "ABOUT_CHATBOT",
+        "predicted_label": "OTHER",
+        "confidence": 0.318,
+        "matched": false
+      },
+      {
+        "query": "what is this chatbot",
+        "expected_label": "ABOUT_CHATBOT",
+        "predicted_label": "ABOUT_CHATBOT",
+        "confidence": 0.879,
+        "matched": true
+      },
+      {
+        "query": "who is this chatbot",
+        "expected_label": "ABOUT_CHATBOT",
+        "predicted_label": "ABOUT_CHATBOT",
+        "confidence": 0.681,
+        "matched": true
+      },
+      {
+        "query": "how do i register",
+        "expected_label": "REGISTER_FORM",
+        "predicted_label": "REGISTER_FORM",
+        "confidence": 0.698,
+        "matched": true
+      },
+      {
+        "query": "where is the registration form",
+        "expected_label": "REGISTER_FORM",
+        "predicted_label": "REGISTER_FORM",
+        "confidence": 0.816,
+        "matched": true
+      },
+      {
+        "query": "can i register online",
+        "expected_label": "REGISTER_FORM",
+        "predicted_label": "REGISTER_FORM",
+        "confidence": 0.791,
+        "matched": true
+      },
+      {
+        "query": "what is your email address",
+        "expected_label": "CONTACT_INFO",
+        "predicted_label": "CONTACT_INFO",
+        "confidence": 0.875,
+        "matched": true
+      },
+      {
+        "query": "what are your contact details",
+        "expected_label": "CONTACT_INFO",
+        "predicted_label": "CONTACT_INFO",
+        "confidence": 0.7,
+        "matched": true
+      },
+      {
+        "query": "how can i contact you",
+        "expected_label": "CONTACT_INFO",
+        "predicted_label": "CONTACT_INFO",
+        "confidence": 0.819,
+        "matched": true
+      },
+      {
+        "query": "how can i donate",
+        "expected_label": "DONATE",
+        "predicted_label": "DONATE",
+        "confidence": 0.775,
+        "matched": true
+      },
+      {
+        "query": "where can i donate",
+        "expected_label": "DONATE",
+        "predicted_label": "DONATE",
+        "confidence": 0.706,
+        "matched": true
+      },
+      {
+        "query": "how do i donate",
+        "expected_label": "DONATE",
+        "predicted_label": "DONATE",
+        "confidence": 0.838,
+        "matched": true
+      },
+      {
+        "query": "tell me about therapy and mentors",
+        "expected_label": "THERAPY_MENTORS",
+        "predicted_label": "THERAPY_MENTORS",
+        "confidence": 0.798,
+        "matched": true
+      },
+      {
+        "query": "do you offer therapy",
+        "expected_label": "THERAPY_MENTORS",
+        "predicted_label": "THERAPY_MENTORS",
+        "confidence": 0.878,
+        "matched": true
+      },
+      {
+        "query": "is mentoring available",
+        "expected_label": "THERAPY_MENTORS",
+        "predicted_label": "THERAPY_MENTORS",
+        "confidence": 0.416,
+        "matched": true
+      },
+      {
+        "query": "where can i volunteer",
+        "expected_label": "VOLUNTEER_VACANCIES",
+        "predicted_label": "VOLUNTEER_VACANCIES",
+        "confidence": 0.506,
+        "matched": true
+      },
+      {
+        "query": "do you have vacancies",
+        "expected_label": "VOLUNTEER_VACANCIES",
+        "predicted_label": "VOLUNTEER_VACANCIES",
+        "confidence": 0.562,
+        "matched": true
+      },
+      {
+        "query": "volunteer opportunities",
+        "expected_label": "VOLUNTEER_VACANCIES",
+        "predicted_label": "VOLUNTEER_VACANCIES",
+        "confidence": 0.893,
+        "matched": true
+      },
+      {
+        "query": "what programmes do you have",
+        "expected_label": "PROGRAMMES",
+        "predicted_label": "PROGRAMMES",
+        "confidence": 0.824,
+        "matched": true
+      },
+      {
+        "query": "what activities do you offer",
+        "expected_label": "PROGRAMMES",
+        "predicted_label": "PROGRAMMES",
+        "confidence": 0.602,
+        "matched": true
+      },
+      {
+        "query": "what programmes do you offer",
+        "expected_label": "PROGRAMMES",
+        "predicted_label": "PROGRAMMES",
+        "confidence": 0.776,
+        "matched": true
+      },
+      {
+        "query": "where can i read your reports, case studies",
+        "expected_label": "REPORT_CASE_STUDY",
+        "predicted_label": "REPORT_CASE_STUDY",
+        "confidence": 0.925,
+        "matched": true
+      },
+      {
+        "query": "where can i read your reports",
+        "expected_label": "REPORT_CASE_STUDY",
+        "predicted_label": "REPORT_CASE_STUDY",
+        "confidence": 0.517,
+        "matched": true
+      },
+      {
+        "query": "case studies and reports",
+        "expected_label": "REPORT_CASE_STUDY",
+        "predicted_label": "REPORT_CASE_STUDY",
+        "confidence": 0.977,
+        "matched": true
+      },
+      {
+        "query": "tell me about the team",
+        "expected_label": "THE_TEAM",
+        "predicted_label": "THE_TEAM",
+        "confidence": 0.717,
+        "matched": true
+      },
+      {
+        "query": "who is on the team",
+        "expected_label": "THE_TEAM",
+        "predicted_label": "THE_TEAM",
+        "confidence": 0.609,
+        "matched": true
+      },
+      {
+        "query": "team and trustees",
+        "expected_label": "THE_TEAM",
+        "predicted_label": "THE_TEAM",
+        "confidence": 0.984,
+        "matched": true
+      },
+      {
+        "query": "what is your curriculum",
+        "expected_label": "CURRICULUM",
+        "predicted_label": "CURRICULUM",
+        "confidence": 0.822,
+        "matched": true
+      },
+      {
+        "query": "tell me about your curriculum",
+        "expected_label": "CURRICULUM",
+        "predicted_label": "CURRICULUM",
+        "confidence": 0.668,
+        "matched": true
+      },
+      {
+        "query": "curriculum details",
+        "expected_label": "CURRICULUM",
+        "predicted_label": "CURRICULUM",
+        "confidence": 0.915,
+        "matched": true
+      },
+      {
+        "query": "what is your history, background",
+        "expected_label": "HISTORY_BACKGROUND",
+        "predicted_label": "HISTORY_BACKGROUND",
+        "confidence": 0.901,
+        "matched": true
+      },
+      {
+        "query": "tell me about history and background",
+        "expected_label": "HISTORY_BACKGROUND",
+        "predicted_label": "HISTORY_BACKGROUND",
+        "confidence": 0.807,
+        "matched": true
+      },
+      {
+        "query": "where can i find your history",
+        "expected_label": "HISTORY_BACKGROUND",
+        "predicted_label": "HISTORY_BACKGROUND",
+        "confidence": 0.469,
+        "matched": true
+      },
+      {
+        "query": "goodbye",
+        "expected_label": "GOODBYE",
+        "predicted_label": "GOODBYE",
+        "confidence": 0.887,
+        "matched": true
+      },
+      {
+        "query": "bye",
+        "expected_label": "GOODBYE",
+        "predicted_label": "GOODBYE",
+        "confidence": 0.938,
+        "matched": true
+      },
+      {
+        "query": "see you later",
+        "expected_label": "GOODBYE",
+        "predicted_label": "GOODBYE",
+        "confidence": 0.781,
+        "matched": true
+      },
+      {
+        "query": "do you offer workshops",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.838,
+        "matched": true
+      },
+      {
+        "query": "what is gift aid",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.64,
+        "matched": true
+      },
+      {
+        "query": "what are your newsletters about",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.338,
+        "matched": true
+      },
+      {
+        "query": "do you sell concert tickets",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.319,
+        "matched": true
+      },
+      {
+        "query": "can you book me a hotel",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.325,
+        "matched": true
+      },
+      {
+        "query": "what is quantum physics",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.25,
+        "matched": true
+      },
+      {
+        "query": "where can i park nearby",
+        "expected_label": "OTHER",
+        "predicted_label": "OTHER",
+        "confidence": 0.325,
+        "matched": true
+      }
+    ]
+  },
+  "retrieval_performance": {
+    "total": 33,
+    "accuracy_at_1": 1.0,
+    "accuracy_at_3": 1.0,
+    "mrr_at_3": 1.0,
+    "rows": [
+      {
+        "group": "send",
+        "query": "What SEND support do you offer?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/send-after-school-club"
+        ]
+      },
+      {
+        "group": "send",
+        "query": "Can you tell me about your SEND support for children?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/send-after-school-club"
+        ]
+      },
+      {
+        "group": "send",
+        "query": "Do you provide support for special educational needs and disabilities?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/send-after-school-club"
+        ]
+      },
+      {
+        "group": "tutoring",
+        "query": "Do you offer tutoring for children?",
+        "expected_url_contains": "copy-of-tutoring-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1"
+        ]
+      },
+      {
+        "group": "tutoring",
+        "query": "Can you tell me about your tutoring and mentoring support?",
+        "expected_url_contains": "copy-of-tutoring-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1"
+        ]
+      },
+      {
+        "group": "tutoring",
+        "query": "What subjects do you cover in tutoring?",
+        "expected_url_contains": "copy-of-tutoring-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1",
+          "https://www.brightfutures4all.com/copy-of-tutoring-1"
+        ]
+      },
+      {
+        "group": "homeschooling",
+        "query": "Can you tell me about your online homeschooling?",
+        "expected_url_contains": "copy-of-homeschooling-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/home"
+        ]
+      },
+      {
+        "group": "homeschooling",
+        "query": "What is the Homeschooling Hub?",
+        "expected_url_contains": "copy-of-homeschooling-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/home"
+        ]
+      },
+      {
+        "group": "homeschooling",
+        "query": "What does your Homeschooling Hub offer?",
+        "expected_url_contains": "copy-of-homeschooling-1",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1"
+        ]
+      },
+      {
+        "group": "talks_speech",
+        "query": "Can you tell me about your talks and keynote speech services?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/about-us",
+          "https://www.brightfutures4all.com/about-us"
+        ]
+      },
+      {
+        "group": "talks_speech",
+        "query": "Do you offer talks and workshops for events?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/copy-of-after-school-activities"
+        ]
+      },
+      {
+        "group": "talks_speech",
+        "query": "Can someone from BF4A give a keynote speech?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/projects-3",
+          "https://www.brightfutures4all.com/projects-3"
+        ]
+      },
+      {
+        "group": "holiday_clubs",
+        "query": "What are your holiday clubs?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/schoolclub"
+        ]
+      },
+      {
+        "group": "holiday_clubs",
+        "query": "Are your holiday clubs free?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/schoolclub"
+        ]
+      },
+      {
+        "group": "holiday_clubs",
+        "query": "Can you tell me about your holiday clubs for children?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/schoolclub"
+        ]
+      },
+      {
+        "group": "leadership_programme",
+        "query": "Can you tell me about the youth leadership programme?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/youth-leadership"
+        ]
+      },
+      {
+        "group": "leadership_programme",
+        "query": "What is your leadership and advocacy programme?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/youth-leadership"
+        ]
+      },
+      {
+        "group": "leadership_programme",
+        "query": "How does the leadership programme support young people?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/event-details_caribbean-christmas-market-luncheon-in-croydon-bright-futures-4-all-10th-anniversary-celebration",
+          "https://www.brightfutures4all.com/event-details/caribbean-christmas-market-luncheon-in-croydon-bright-futures-4-all-10th-anniversary-celebration"
+        ]
+      },
+      {
+        "group": "odd_girl_in",
+        "query": "Can you tell me about Odd Girl In?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-homeschooling-1"
+        ]
+      },
+      {
+        "group": "odd_girl_in",
+        "query": "What is the Odd Girl In club?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club"
+        ]
+      },
+      {
+        "group": "odd_girl_in",
+        "query": "Do you run Odd Girl In for girls?",
+        "expected_url_contains": "youth-leadership",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club"
+        ]
+      },
+      {
+        "group": "workshops",
+        "query": "Can you tell me about your workshops?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs"
+        ]
+      },
+      {
+        "group": "workshops",
+        "query": "Do you run workshops for schools or communities?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/copy-of-about-us",
+          "https://www.brightfutures4all.com/copy-of-about-us"
+        ]
+      },
+      {
+        "group": "workshops",
+        "query": "What workshops do you offer?",
+        "expected_url_contains": "copy-of-after-school-activities",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/copy-of-after-school-activities",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs"
+        ]
+      },
+      {
+        "group": "international_youth_exchange_programme",
+        "query": "Can you tell me about the international youth exchange programme?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/send-after-school-club",
+          "https://www.brightfutures4all.com/youth-leadership"
+        ]
+      },
+      {
+        "group": "international_youth_exchange_programme",
+        "query": "What is the international summer school programme?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/send-after-school-club",
+          "https://www.brightfutures4all.com/youth-leadership"
+        ]
+      },
+      {
+        "group": "international_youth_exchange_programme",
+        "query": "How did the international youth exchange programme work?",
+        "expected_url_contains": "holiday-clubs",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/holiday-clubs",
+          "https://www.brightfutures4all.com/youth-leadership",
+          "https://www.brightfutures4all.com/send-after-school-club"
+        ]
+      },
+      {
+        "group": "grass2grades",
+        "query": "Can you tell me about Grass2Grades?",
+        "expected_url_contains": "send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/projects-3"
+        ]
+      },
+      {
+        "group": "grass2grades",
+        "query": "What is the Grass2Grades programme?",
+        "expected_url_contains": "send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/send-after-school-club"
+        ]
+      },
+      {
+        "group": "grass2grades",
+        "query": "How does Grass2Grades combine sport and maths learning?",
+        "expected_url_contains": "send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/testimonials"
+        ]
+      },
+      {
+        "group": "cultural_trips",
+        "query": "Can you tell me about the cultural trips you offer?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/projects-3-1"
+        ]
+      },
+      {
+        "group": "cultural_trips",
+        "query": "Do children take part in cultural trips and outdoor learning?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/projects-3-1"
+        ]
+      },
+      {
+        "group": "cultural_trips",
+        "query": "What do you do on cultural trips?",
+        "expected_url_contains": "copy-of-send-after-school-club",
+        "first_hit_rank": 1,
+        "top_urls": [
+          "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+          "https://www.brightfutures4all.com/copy-of-holiday-clubs",
+          "https://www.brightfutures4all.com/projects-3-1"
+        ]
+      }
+    ]
+  },
+  "navigation_accuracy": {
+    "positive_total": 16,
+    "positive_accuracy": 1.0,
+    "negative_total": 12,
+    "false_positive_rate": 0.0,
+    "positive_rows": [
+      {
+        "query": "open the donate page",
+        "expected_url": "https://www.brightfutures4all.com/donate",
+        "actual_url": "https://www.brightfutures4all.com/donate",
+        "matched": true
+      },
+      {
+        "query": "show me the contact page",
+        "expected_url": "https://www.brightfutures4all.com/contact-10",
+        "actual_url": "https://www.brightfutures4all.com/contact-10",
+        "matched": true
+      },
+      {
+        "query": "open the report page",
+        "expected_url": "https://www.brightfutures4all.com/",
+        "actual_url": "https://www.brightfutures4all.com/",
+        "matched": true
+      },
+      {
+        "query": "open the home page",
+        "expected_url": "https://www.brightfutures4all.com/",
+        "actual_url": "https://www.brightfutures4all.com/",
+        "matched": true
+      },
+      {
+        "query": "open the photo gallery page",
+        "expected_url": "https://www.brightfutures4all.com/general-clean",
+        "actual_url": "https://www.brightfutures4all.com/general-clean",
+        "matched": true
+      },
+      {
+        "query": "open the policies page",
+        "expected_url": "https://www.brightfutures4all.com/general-5",
+        "actual_url": "https://www.brightfutures4all.com/general-5",
+        "matched": true
+      },
+      {
+        "query": "open the after school activities page",
+        "expected_url": "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+        "actual_url": "https://www.brightfutures4all.com/copy-of-send-after-school-club",
+        "matched": true
+      },
+      {
+        "query": "open the holiday clubs page",
+        "expected_url": "https://www.brightfutures4all.com/holiday-clubs",
+        "actual_url": "https://www.brightfutures4all.com/holiday-clubs",
+        "matched": true
+      },
+      {
+        "query": "open the homeschooling page",
+        "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+        "actual_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+        "matched": true
+      },
+      {
+        "query": "open the vacancies page",
+        "expected_url": "https://www.brightfutures4all.com/projects-3",
+        "actual_url": "https://www.brightfutures4all.com/projects-3",
+        "matched": true
+      },
+      {
+        "query": "show me the curriculum page",
+        "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+        "actual_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+        "matched": true
+      },
+      {
+        "query": "take me to the about page",
+        "expected_url": "https://www.brightfutures4all.com/",
+        "actual_url": "https://www.brightfutures4all.com/",
+        "matched": true
+      },
+      {
+        "query": "open the team page",
+        "expected_url": "https://www.brightfutures4all.com/copy-of-meet-our-team-trustees",
+        "actual_url": "https://www.brightfutures4all.com/copy-of-meet-our-team-trustees",
+        "matched": true
+      },
+      {
+        "query": "show me the donate page",
+        "expected_url": "https://www.brightfutures4all.com/donate",
+        "actual_url": "https://www.brightfutures4all.com/donate",
+        "matched": true
+      },
+      {
+        "query": "open the register page",
+        "expected_url": "https://app.teachngo.com/leads/add/11035",
+        "actual_url": "https://app.teachngo.com/leads/add/11035",
+        "matched": true
+      },
+      {
+        "query": "show me the newsletters page",
+        "expected_url": "https://www.brightfutures4all.com/blog",
+        "actual_url": "https://www.brightfutures4all.com/blog",
+        "matched": true
+      }
+    ],
+    "negative_rows": [
+      {
+        "query": "how can i donate?",
+        "opened_page": false
+      },
+      {
+        "query": "what are your contact details?",
+        "opened_page": false
+      },
+      {
+        "query": "what is bf4a?",
+        "opened_page": false
+      },
+      {
+        "query": "do you offer tutoring?",
+        "opened_page": false
+      },
+      {
+        "query": "what is your privacy policy",
+        "opened_page": false
+      },
+      {
+        "query": "what are your newsletters about",
+        "opened_page": false
+      },
+      {
+        "query": "tell me about workshops",
+        "opened_page": false
+      },
+      {
+        "query": "what send support do you offer?",
+        "opened_page": false
+      },
+      {
+        "query": "do you sell concert tickets",
+        "opened_page": false
+      },
+      {
+        "query": "can you book me a hotel",
+        "opened_page": false
+      },
+      {
+        "query": "open the concert tickets page",
+        "opened_page": false
+      },
+      {
+        "query": "show me the pizza menu",
+        "opened_page": false
+      }
+    ]
+  },
+  "end_to_end_backend_routing_performance": {
+    "total": 41,
+    "correct": 41,
+    "accuracy": 1.0,
+    "rows": [
+      {
+        "query": "open the donate page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "show me the contact page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the report page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the home page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the photo gallery page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the policies page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the after school activities page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the holiday clubs page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the homeschooling page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the vacancies page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "show me the curriculum page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "take me to the about page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the team page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "open the register page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "show me the newsletters page",
+        "expected_route": "navigation",
+        "actual_route": "navigation",
+        "matched": true
+      },
+      {
+        "query": "who are you",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what is your purpose",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "where can i read your reports, case studies",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "tell me about the team",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what is your curriculum",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what is your history, background",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "how can i donate?",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what are your contact details?",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what is bf4a",
+        "expected_route": "intent",
+        "actual_route": "intent",
+        "matched": true
+      },
+      {
+        "query": "what is your privacy policy",
+        "expected_route": "kb",
+        "actual_route": "kb",
+        "matched": true
+      },
+      {
+        "query": "where can i view your photo gallery",
+        "expected_route": "kb",
+        "actual_route": "kb",
+        "matched": true
+      },
+      {
+        "query": "what are your newsletters about",
+        "expected_route": "kb",
+        "actual_route": "kb",
+        "matched": true
+      },
+      {
+        "query": "send",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "tutoring",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "homeschooling",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "talks and speech",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "holiday clubs",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "leadership programme",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "odd girl in",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "workshops",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "international youth exchange programme",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "grass2grades",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "cultural trips",
+        "expected_route": "retrieval",
+        "actual_route": "retrieval",
+        "matched": true
+      },
+      {
+        "query": "do you sell concert tickets",
+        "expected_route": "clarification",
+        "actual_route": "clarification",
+        "matched": true
+      },
+      {
+        "query": "can you book me a hotel",
+        "expected_route": "clarification",
+        "actual_route": "clarification",
+        "matched": true
+      },
+      {
+        "query": "open the concert tickets page",
+        "expected_route": "clarification",
+        "actual_route": "clarification",
+        "matched": true
+      }
+    ]
+  },
+  "page_summarisation_qualitative_review": [
+    {
+      "query": "summarise the home page",
+      "expected_url": "https://www.brightfutures4all.com/",
+      "actual_url": "https://www.brightfutures4all.com/",
+      "matched_expected_url": true,
+      "summary": "Summarising, founded by Director Mrs Karen Bryson, Bright Futures 4 All, provides quality, education and well-being services, that support adults and children to achieve extraordinary results in their lives. The responsibility for raising a child is shared with the extended family - this includes neighbours, friends, schools and community-centred enterprises.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "can you summarise the home page for me",
+      "expected_url": "https://www.brightfutures4all.com/",
+      "actual_url": "https://www.brightfutures4all.com/",
+      "matched_expected_url": true,
+      "summary": "Summarising, founded by Director Mrs Karen Bryson, Bright Futures 4 All, provides quality, education and well-being services, that support adults and children to achieve extraordinary results in their lives. The responsibility for raising a child is shared with the extended family - this includes neighbours, friends, schools and community-centred enterprises.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarise the donate page",
+      "expected_url": "https://www.brightfutures4all.com/donate",
+      "actual_url": "https://www.brightfutures4all.com/donate",
+      "matched_expected_url": true,
+      "summary": "Summarising, to continue our mission and expand our offerings, we kindly ask for your support through donations. From Croydon's first-ever, free SEND After-School Clubs, Integrated Holiday Clubs, to tutoring, therapy & youth development & career guidance, we recognise that when families are supported, children thrive. Your support helps us continue building safe, inclusive spaces where every child and parent feels seen, heard, and empowered.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarize the donate page",
+      "expected_url": "https://www.brightfutures4all.com/donate",
+      "actual_url": "https://www.brightfutures4all.com/donate",
+      "matched_expected_url": true,
+      "summary": "Summarising, to continue our mission and expand our offerings, we kindly ask for your support through donations. From Croydon's first-ever, free SEND After-School Clubs, Integrated Holiday Clubs, to tutoring, therapy & youth development & career guidance, we recognise that when families are supported, children thrive. Your support helps us continue building safe, inclusive spaces where every child and parent feels seen, heard, and empowered.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summary of the donate page",
+      "expected_url": "https://www.brightfutures4all.com/donate",
+      "actual_url": "https://www.brightfutures4all.com/donate",
+      "matched_expected_url": true,
+      "summary": "Summarising, to continue our mission and expand our offerings, we kindly ask for your support through donations. From Croydon's first-ever, free SEND After-School Clubs, Integrated Holiday Clubs, to tutoring, therapy & youth development & career guidance, we recognise that when families are supported, children thrive. Your support helps us continue building safe, inclusive spaces where every child and parent feels seen, heard, and empowered.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summary of the volounteers and vacancies page",
+      "expected_url": "https://www.brightfutures4all.com/projects-3",
+      "actual_url": "https://www.brightfutures4all.com/projects-3",
+      "matched_expected_url": true,
+      "summary": "Summarising, this page lists BF4A volunteer opportunities and vacancies, including Tutors, Learning Support Assistant/Mentor, Fundraising and Communications Co-ordinator, Project Group leaders, and Play Workers & Database/Fundraising Assistants. BF4A is a charitable community hub supporting neurodiverse and disadvantaged children and their families. The roles support fundraising, communications and community engagement as well as after-school projects and holiday clubs.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarise the volounteers and vacancies page",
+      "expected_url": "https://www.brightfutures4all.com/projects-3",
+      "actual_url": "https://www.brightfutures4all.com/projects-3",
+      "matched_expected_url": true,
+      "summary": "Summarising, this page lists BF4A volunteer opportunities and vacancies, including Tutors, Learning Support Assistant/Mentor, Fundraising and Communications Co-ordinator, Project Group leaders, and Play Workers & Database/Fundraising Assistants. BF4A is a charitable community hub supporting neurodiverse and disadvantaged children and their families. The roles support fundraising, communications and community engagement as well as after-school projects and holiday clubs.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "can you summarise the tutors mentors and therapists page",
+      "expected_url": "https://www.brightfutures4all.com/copy-of-tutoring-1",
+      "actual_url": "https://www.brightfutures4all.com/copy-of-tutoring-1",
+      "matched_expected_url": true,
+      "summary": "Summarising, bf4a offers tutoring, mentoring and therapeutic support, combining academic help, one-to-one guidance, and support for emotional wellbeing and social skills. Tutoring covers English, maths, science and reasoning, including SATS, 11+ and GCSE preparation for school-aged learners. The page also highlights therapy and psychotherapist support for emotional wellbeing, resilience and wider personal development.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarise the tutors mentors and therapists page",
+      "expected_url": "https://www.brightfutures4all.com/copy-of-tutoring-1",
+      "actual_url": "https://www.brightfutures4all.com/copy-of-tutoring-1",
+      "matched_expected_url": true,
+      "summary": "Summarising, bf4a offers tutoring, mentoring and therapeutic support, combining academic help, one-to-one guidance, and support for emotional wellbeing and social skills. Tutoring covers English, maths, science and reasoning, including SATS, 11+ and GCSE preparation for school-aged learners. The page also highlights therapy and psychotherapist support for emotional wellbeing, resilience and wider personal development.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarise the homeschooling page",
+      "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "actual_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "matched_expected_url": true,
+      "summary": "Summarising, bright Futures 4 All is a non-profit, non-for-profit education and therapeutic support programme in Croydon.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "summarise the home schooling page",
+      "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "actual_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "matched_expected_url": true,
+      "summary": "Summarising, bright Futures 4 All is a non-profit, non-for-profit education and therapeutic support programme in Croydon.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "query": "please summarise the home schooling page",
+      "expected_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "actual_url": "https://www.brightfutures4all.com/copy-of-homeschooling-1",
+      "matched_expected_url": true,
+      "summary": "Summarising, bright Futures 4 All is a non-profit, non-for-profit education and therapeutic support programme in Croydon.",
+      "open_confirmation_present": true,
+      "quick_replies": [
+        "Yes",
+        "No"
+      ]
+    }
+  ]
+}

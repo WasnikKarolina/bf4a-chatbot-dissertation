@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BF4A Chatbot Widget</title>
+  <style>
+    /* Colour variables that keep the widget styling consistent in one place. */
+    :root {
+      --bg: #f4ede1;
+      --panel: #fffaf1;
+      --panel-strong: #f7efdf;
+      --panel-border: #d8c4a0;
+      --green: #1d6b57;
+      --green-strong: #154f41;
+      --gold: #d7841f;
+      --gold-soft: #f1d8ad;
+      --text: #233131;
+      --muted: #66726c;
+      --user: #e4f0ea;
+      --bot: #fbf4e7;
+      --surface: rgba(255, 250, 241, 0.96);
+      --shadow: 0 26px 60px rgba(34, 49, 49, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", sans-serif;
+      background: transparent;
+      color: var(--text);
+    }
+
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    /* Outer shell that anchors the launcher and panel in the bottom-right corner. */
+    .chatbot-shell {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 9999;
+    }
+
+    .chatbot-launcher {
+      width: 68px;
+      height: 68px;
+      border: 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, #ffd08a 0%, #e6942a 45%, #c96f12 100%);
+      color: #fff8ef;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .chatbot-launcher:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 30px 64px rgba(34, 49, 49, 0.22);
+    }
+
+    .chatbot-launcher svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    /* Main panel styles that control the fixed widget size and glass-like surface. */
+    .chatbot-panel {
+      width: min(392px, calc(100vw - 32px));
+      height: min(640px, calc(100vh - 108px));
+      border: 1px solid rgba(216, 196, 160, 0.9);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 244, 231, 0.96)),
+        var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      margin-bottom: 16px;
+      backdrop-filter: blur(14px);
+    }
+
+    .chatbot-panel.open {
+      display: flex;
+    }
+
+    .chatbot-header {
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid rgba(216, 196, 160, 0.75);
+      background:
+        linear-gradient(135deg, rgba(255, 214, 150, 0.5), rgba(240, 161, 58, 0.28) 52%, rgba(215, 132, 31, 0.22)),
+        var(--panel-strong);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Header layout that keeps the branding and close button aligned. */
+    .chatbot-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .chatbot-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .chatbot-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .chatbot-brand-mark {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .chatbot-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .chatbot-close {
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 250, 241, 0.7);
+      color: var(--green-strong);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      padding: 0;
+    }
+
+    .chatbot-close-icon {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .chatbot-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    .chatbot-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+      max-width: 300px;
+    }
+
+    /* Scrollable message area used for the conversation transcript. */
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background:
+        radial-gradient(circle at top left, rgba(29, 107, 87, 0.08), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(216, 160, 76, 0.12), transparent 28%),
+        linear-gradient(180deg, rgba(255, 250, 241, 0.92), rgba(247, 239, 223, 0.98));
+      scroll-behavior: smooth;
+    }
+
+    .message {
+      max-width: 86%;
+      padding: 12px 14px;
+      border-radius: 18px;
+      font-size: 14px;
+      line-height: 1.48;
+      white-space: pre-wrap;
+      box-shadow: 0 10px 24px rgba(34, 49, 49, 0.06);
+    }
+
+    /* Bot bubble variants used for standard replies, quiz cards, and feedback. */
+    .message.bot {
+      align-self: flex-start;
+      background: var(--bot);
+      border: 1px solid rgba(216, 196, 160, 0.8);
+    }
+
+    .message.bot.quiz-card {
+      max-width: 92%;
+      background:
+        linear-gradient(180deg, rgba(255, 248, 236, 0.98), rgba(251, 244, 231, 0.98));
+      border: 1px solid rgba(215, 132, 31, 0.22);
+      box-shadow: 0 14px 28px rgba(215, 132, 31, 0.08);
+    }
+
+    .message.bot.quiz-feedback {
+      max-width: 74%;
+      padding: 11px 13px;
+      font-weight: 700;
+      background: var(--bot);
+      border: 1px solid rgba(216, 196, 160, 0.8);
+    }
+
+    .message.bot.quiz-feedback.correct,
+    .message.bot.quiz-feedback.correct .message-copy,
+    .message.bot.quiz-feedback.correct .message-line {
+      color: #1f6b3d !important;
+    }
+
+    .message.bot.quiz-feedback.incorrect,
+    .message.bot.quiz-feedback.incorrect .message-copy,
+    .message.bot.quiz-feedback.incorrect .message-line {
+      color: #a23939 !important;
+    }
+
+    .message-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    /* Message text helpers used by the richer bot formatting. */
+    .message-line {
+      margin: 0;
+    }
+
+    .message-heading {
+      font-weight: 700;
+      color: #7f4a0d;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .message-progress {
+      width: 100%;
+      height: 6px;
+      margin-bottom: 4px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(215, 132, 31, 0.12);
+    }
+
+    .message-progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f0a13a, #d7841f);
+    }
+
+    .message-note {
+      display: block;
+      color: #9a5a10;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    .message-open-note {
+      display: block;
+      color: var(--text);
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: var(--user);
+      border: 1px solid rgba(29, 107, 87, 0.18);
+    }
+
+    /* Loading styles used while the frontend is waiting for the backend reply. */
+    .message.loading {
+      min-width: 78px;
+      padding: 12px 16px;
+    }
+
+    .loading-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .loading-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(215, 132, 31, 0.88);
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    .loading-dot:nth-child(2) {
+      animation-delay: 0.14s;
+    }
+
+    .loading-dot:nth-child(3) {
+      animation-delay: 0.28s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 0.35;
+      }
+      40% {
+        transform: translateY(-4px);
+        opacity: 1;
+      }
+    }
+
+    .sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .sources a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Button row styles shared by quick replies, quiz options, and clarifications. */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .button-row.quiz-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .button-row.quiz-actions {
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid rgba(29, 107, 87, 0.16);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+    }
+
+    .chip:hover:not(:disabled) {
+      background: #f1f8f4;
+      border-color: rgba(29, 107, 87, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .chip:disabled {
+      opacity: 0.55;
+      cursor: default;
+      transform: none;
+    }
+
+    .chip.quiz-option {
+      width: 100%;
+      justify-content: flex-start;
+      text-align: left;
+      border-radius: 16px;
+      padding: 10px 12px;
+      border-color: rgba(215, 132, 31, 0.24);
+      background: rgba(255, 255, 255, 0.95);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(34, 49, 49, 0.05);
+    }
+
+    .chip.quiz-option:hover:not(:disabled) {
+      background: rgba(255, 245, 229, 0.98);
+      border-color: rgba(215, 132, 31, 0.42);
+    }
+
+    .chip.quiz-action {
+      padding: 8px 13px;
+      border-color: rgba(215, 132, 31, 0.24);
+      background: rgba(255, 249, 240, 0.96);
+      font-weight: 700;
+    }
+
+    /* Input area that holds the typing status, textarea, and send button. */
+    .chatbot-input-wrap {
+      padding: 14px;
+      border-top: 1px solid rgba(216, 196, 160, 0.8);
+      background: var(--surface);
+    }
+
+    .chatbot-status {
+      min-height: 18px;
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      visibility: hidden;
+    }
+
+    .chatbot-status.visible {
+      visibility: visible;
+    }
+
+    .chatbot-form {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .chatbot-input {
+      flex: 1;
+      min-height: 48px;
+      max-height: 120px;
+      resize: none;
+      border: 1px solid rgba(216, 196, 160, 0.95);
+      border-radius: 18px;
+      padding: 12px 14px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.96);
+      transition: border-color 140ms ease, box-shadow 140ms ease;
+    }
+
+    .chatbot-input:focus {
+      outline: none;
+      border-color: rgba(29, 107, 87, 0.42);
+      box-shadow: 0 0 0 3px rgba(29, 107, 87, 0.1);
+    }
+
+    .chatbot-input:disabled {
+      background: rgba(248, 241, 227, 0.96);
+      color: var(--muted);
+      cursor: default;
+    }
+
+    .chatbot-send {
+      min-width: 82px;
+      border: 0;
+      border-radius: 18px;
+      padding: 12px 16px;
+      font-weight: 700;
+      background: linear-gradient(180deg, #f0a13a, #d7841f);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 140ms ease, opacity 140ms ease;
+    }
+
+    .chatbot-send:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+
+    .chatbot-send:disabled {
+      opacity: 0.6;
+      cursor: default;
+      transform: none;
+    }
+
+    /* Mobile layout rules that keep the widget usable on smaller screens. */
+    @media (max-width: 640px) {
+      .chatbot-shell {
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .chatbot-panel {
+        width: calc(100vw - 24px);
+        height: min(80vh, 640px);
+      }
+
+      .chatbot-launcher {
+        width: 62px;
+        height: 62px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main launcher and panel wrapper for the embedded chatbot UI. -->
+  <div class="chatbot-shell">
+    <div id="chatbotPanel" class="chatbot-panel" aria-live="polite">
+        <!-- Header area with the BF4A branding, title, and close control. -->
+        <div class="chatbot-header">
+          <div class="chatbot-header-row">
+            <div class="chatbot-brand">
+              <img
+                class="chatbot-brand-mark"
+                src="https://static.wixstatic.com/media/98e25f_5e07edfd3ab64cfdbedbf53fcc4ffcf8~mv2.png/v1/fill/w_102%2Ch_111%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/BF4ALL_Hirez_Transparent.png"
+                alt="BF4A logo"
+              >
+              <div class="chatbot-title-wrap">
+                <h1 class="chatbot-title">How can I help?</h1>
+                <div class="chatbot-subtitle">BF4A chatbot</div>
+                <p class="chatbot-note">I may make mistakes. For important or sensitive matters, please contact BF4A directly.</p>
+              </div>
+            </div>
+            <button id="chatbotClose" class="chatbot-close" type="button" aria-label="Close chatbot">
+              <span class="chatbot-close-icon" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      <!-- Scrollable message container that the script fills during the conversation. -->
+      <div id="chatbotMessages" class="chatbot-messages"></div>
+      <!-- Input area used for sending new messages to the backend. -->
+      <div class="chatbot-input-wrap">
+        <p id="chatbotStatus" class="chatbot-status">Working on that now.</p>
+        <form id="chatbotForm" class="chatbot-form">
+          <textarea id="chatbotInput" class="chatbot-input" placeholder="Type your question" rows="1"></textarea>
+          <button id="chatbotSend" class="chatbot-send" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- Launcher button shown when the main chatbot panel is closed. -->
+    <button id="chatbotLauncher" class="chatbot-launcher" type="button" aria-label="Open chatbot">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 3C6.48 3 2 6.88 2 11.68c0 2.21 1 4.24 2.67 5.76L4 21l4.16-2.08c1.14.29 2.37.44 3.84.44 5.52 0 10-3.88 10-8.68S17.52 3 12 3Z" fill="currentColor"></path>
+        <path d="M7.25 9.4h9.5c.41 0 .75.34.75.75v3.14c0 .41-.34.75-.75.75h-4.2l-2.08 1.8v-1.8H7.25a.75.75 0 0 1-.75-.75v-3.14c0-.41.34-.75.75-.75Z" fill="#fffaf1"></path>
+        <circle cx="9.25" cy="11.72" r="1.02" fill="#1d6b57"></circle>
+        <circle cx="12" cy="11.72" r="1.02" fill="#1d6b57"></circle>
+        <circle cx="14.75" cy="11.72" r="1.02" fill="#1d6b57"></circle>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // Config values and storage keys used by the widget at runtime.
+    const API_URL = window.BF4A_CHATBOT_API_URL || "http://127.0.0.1:8000/chat";
+    const SESSION_KEY = "bf4a-chatbot-session-id";
+    const STATE_KEY = "bf4a-chatbot-state-v3";
+    const HOST_READY_TYPE = "BF4A_HOST_READY";
+    const HOST_OPEN_TYPE = "BF4A_OPEN_URL";
+    const CHATBOT_READY_TYPE = "BF4A_CHATBOT_READY";
+
+    // DOM handles used across the widget logic.
+    const launcher = document.getElementById("chatbotLauncher");
+    const panel = document.getElementById("chatbotPanel");
+    const closeButton = document.getElementById("chatbotClose");
+    const messages = document.getElementById("chatbotMessages");
+    const form = document.getElementById("chatbotForm");
+    const input = document.getElementById("chatbotInput");
+    const sendButton = document.getElementById("chatbotSend");
+    const statusText = document.getElementById("chatbotStatus");
+
+    // Runtime state for loading, host communication, and saved transcript entries.
+    let isLoading = false;
+    let loadingNode = null;
+    let hostBridgeReady = false;
+    let transcript = [];
+
+    function sessionId() {
+      // Session id that keeps the backend conversation state tied to the same browser session.
+      const existing = localStorage.getItem(SESSION_KEY);
+      if (existing) {
+        return existing;
+      }
+      const created = `bf4a-${Math.random().toString(36).slice(2)}-${Date.now()}`;
+      localStorage.setItem(SESSION_KEY, created);
+      return created;
+    }
+
+    function scrollMessagesToBottom() {
+      // Scroll helper that keeps the latest message visible after rendering.
+      requestAnimationFrame(() => {
+        messages.scrollTo({
+          top: messages.scrollHeight,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    function setBusyState(nextBusy) {
+      // Busy-state toggle that disables input while the widget is waiting for the backend.
+      isLoading = Boolean(nextBusy);
+      input.disabled = isLoading;
+      sendButton.disabled = isLoading;
+      statusText.classList.toggle("visible", isLoading);
+      panel.setAttribute("aria-busy", isLoading ? "true" : "false");
+      document.querySelectorAll(".chip").forEach((button) => {
+        button.disabled = isLoading;
+      });
+      if (!isLoading) {
+        input.focus();
+      }
+    }
+
+    function createLoadingBubble() {
+      // Loading bubble that shows the small animated typing indicator.
+      const wrapper = document.createElement("div");
+      wrapper.className = "message bot loading";
+      const row = document.createElement("div");
+      row.className = "loading-row";
+      for (let i = 0; i < 3; i += 1) {
+        const dot = document.createElement("span");
+        dot.className = "loading-dot";
+        row.appendChild(dot);
+      }
+      wrapper.appendChild(row);
+      return wrapper;
+    }
+
+    function showLoadingBubble() {
+      // Display helper that avoids adding a second loading bubble by mistake.
+      if (loadingNode) {
+        return;
+      }
+      loadingNode = createLoadingBubble();
+      messages.appendChild(loadingNode);
+      scrollMessagesToBottom();
+    }
+
+    function hideLoadingBubble() {
+      // Remove helper for the loading bubble once a reply has arrived.
+      if (!loadingNode) {
+        return;
+      }
+      loadingNode.remove();
+      loadingNode = null;
+    }
+
+    function serializeResponse(response) {
+      // Small serializer that keeps only the response fields needed for transcript restore.
+      if (!response) {
+        return null;
+      }
+      return {
+        citations: Array.isArray(response.citations) ? response.citations : [],
+        quick_replies: Array.isArray(response.quick_replies) ? response.quick_replies : [],
+        needs_clarification: Boolean(response.needs_clarification),
+        clarification_options: Array.isArray(response.clarification_options) ? response.clarification_options : []
+      };
+    }
+
+    function saveState() {
+      // Local storage save that keeps the panel state and recent transcript between page loads.
+      localStorage.setItem(STATE_KEY, JSON.stringify({
+        isOpen: panel.classList.contains("open"),
+        transcript: transcript.slice(-40)
+      }));
+    }
+
+    function escapeHtml(value) {
+      // HTML escape helper used before bot text is turned into markup.
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function getQuizMeta(text, response) {
+      // Quiz metadata parser used to detect quiz questions and quiz decision prompts.
+      const message = String(text || "");
+      const questionMatch = message.match(/Question\s+(\d+)\s+of\s+(\d+):/i);
+      const quickReplies = Array.isArray(response?.quick_replies) ? response.quick_replies : [];
+      return {
+        isQuizQuestion: Boolean(questionMatch),
+        questionIndex: questionMatch ? Number(questionMatch[1]) : 0,
+        questionTotal: questionMatch ? Number(questionMatch[2]) : 0,
+        isQuizDecision: quickReplies.includes("Continue quiz") || quickReplies.includes("Finish quiz"),
+      };
+    }
+
+    function splitQuizResponse(text) {
+      // Split helper that separates quiz feedback from the next question when the backend returns both together.
+      const message = String(text || "").trim();
+      const match = message.match(/^(Correct\.|Not quite\.[\s\S]*?)(?:\n\s*\n)(Question\s+\d+\s+of\s+\d+:[\s\S]+|You have answered[\s\S]+)$/i);
+      if (!match) {
+        return null;
+      }
+      // Feedback rewrite that keeps the frontend wording aligned with the quiz styling.
+      const rawFeedback = match[1].trim();
+      const normalizedFeedback = /^Correct\.$/i.test(rawFeedback)
+        ? "✅ That is correct! Well done!"
+        : `❌ ${rawFeedback}`;
+      return {
+        feedback: normalizedFeedback,
+        body: match[2].trim()
+      };
+    }
+
+    function buildBotMarkup(text, quizMeta = {}) {
+      // Markup builder that turns bot text into the richer frontend presentation used in the widget.
+      const lines = String(text || "").split(/\r?\n/).filter((line) => line.trim().length);
+      const parts = [];
+      if (quizMeta.isQuizQuestion && quizMeta.questionTotal > 0) {
+        // Progress bar that reflects the current quiz position inside the batch.
+        const width = Math.max(0, Math.min(100, (quizMeta.questionIndex / quizMeta.questionTotal) * 100));
+        parts.push(`<div class="message-progress"><div class="message-progress-fill" style="width:${width}%"></div></div>`);
+      }
+      lines.forEach((line) => {
+        const trimmed = line.trim();
+        const safe = escapeHtml(trimmed);
+        if (/^Question \d+ of \d+:/i.test(trimmed)) {
+          parts.push(`<div class="message-line message-heading">${safe}</div>`);
+          return;
+        }
+        if (/^You can stop the quiz by typing "stop quiz"\.?$/i.test(trimmed)) {
+          parts.push(`<div class="message-line message-note">${safe}</div>`);
+          return;
+        }
+        if (/^Would you like me to open\b/i.test(trimmed)) {
+          parts.push(`<div class="message-line message-open-note">${safe}</div>`);
+          return;
+        }
+        parts.push(`<div class="message-line">${safe}</div>`);
+      });
+      return parts.join("");
+    }
+
+    function renderMessageText(wrapper, text, role, response) {
+      // Text renderer that keeps user messages plain and bot messages styled.
+      if (role !== "bot") {
+        wrapper.textContent = text;
+        return;
+      }
+      const quizMeta = getQuizMeta(text, response);
+      if (quizMeta.isQuizQuestion) {
+        wrapper.classList.add("quiz-card");
+      }
+      const content = document.createElement("div");
+      content.className = "message-copy";
+      content.innerHTML = buildBotMarkup(text, quizMeta);
+      wrapper.appendChild(content);
+    }
+
+    function appendMessage(text, role, response, options = {}) {
+      // Message renderer that adds the bubble, sources, quick replies, and transcript entry.
+      const persist = options.persist !== false;
+      if (role === "bot" && !options.skipQuizSplit) {
+        // Quiz responses sometimes contain feedback and the next question together, so they are split here for display.
+        const split = splitQuizResponse(text);
+        if (split) {
+          const feedbackResponse = {
+            citations: [],
+            quick_replies: [],
+            needs_clarification: false,
+            clarification_options: []
+          };
+          appendMessage(split.feedback, "bot", feedbackResponse, {
+            persist,
+            skipQuizSplit: true,
+            bubbleClass: split.feedback.startsWith("✅") ? "quiz-feedback correct" : "quiz-feedback incorrect"
+          });
+          appendMessage(split.body, "bot", response, {
+            persist,
+            skipQuizSplit: true
+          });
+          return;
+        }
+      }
+      const wrapper = document.createElement("div");
+      wrapper.className = `message ${role}`;
+      if (options.bubbleClass) {
+        wrapper.className += ` ${options.bubbleClass}`;
+      }
+      const quizMeta = getQuizMeta(text, response);
+      renderMessageText(wrapper, text, role, response);
+
+      if (role === "bot" && response?.citations?.length) {
+        // Source links that are shown under retrieval and summary responses when citations are present.
+        const sources = document.createElement("div");
+        sources.className = "sources";
+        response.citations.forEach((citation) => {
+          if (!citation.url) {
+            return;
+          }
+          const link = document.createElement("a");
+          link.href = citation.url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = citation.title || "Source";
+          link.addEventListener("click", () => {
+            saveState();
+          });
+          sources.appendChild(link);
+        });
+        if (sources.childNodes.length) {
+          wrapper.appendChild(sources);
+        }
+      }
+
+      const buttons = document.createElement("div");
+      buttons.className = "button-row";
+
+      // Action responses open pages immediately, so they do not also need quick-reply buttons.
+      const hasOpenAction = Array.isArray(response?.actions) && response.actions.some((action) => action?.type === "OPEN_URL");
+
+      if (role === "bot" && !hasOpenAction && Array.isArray(response?.quick_replies)) {
+        // Quick replies used for quiz answers, confirmation prompts, and suggested next actions.
+        if (quizMeta.isQuizQuestion) {
+          buttons.classList.add("quiz-options");
+        }
+        if (quizMeta.isQuizDecision) {
+          buttons.classList.add("quiz-actions");
+        }
+        response.quick_replies.forEach((label) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "chip";
+          if (quizMeta.isQuizQuestion) {
+            button.classList.add("quiz-option");
+          }
+          if (quizMeta.isQuizDecision) {
+            button.classList.add("quiz-action");
+          }
+          button.textContent = label;
+          button.disabled = isLoading;
+          button.addEventListener("click", () => sendMessage(label));
+          buttons.appendChild(button);
+        });
+      }
+
+      if (role === "bot" && response?.needs_clarification && Array.isArray(response?.clarification_options)) {
+        // Clarification buttons that let the user steer the chatbot toward the right topic.
+        response.clarification_options.forEach((option) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "chip";
+          button.textContent = option.label;
+          button.disabled = isLoading;
+          button.addEventListener("click", () => sendMessage(option.label));
+          buttons.appendChild(button);
+        });
+      }
+
+      if (buttons.childNodes.length) {
+        wrapper.appendChild(buttons);
+      }
+
+      messages.appendChild(wrapper);
+      scrollMessagesToBottom();
+
+      if (persist) {
+        transcript.push({
+          text,
+          role,
+          response: serializeResponse(response)
+        });
+        saveState();
+      }
+    }
+
+    function buildActionUrl(payload) {
+      // URL helper that resolves backend page-open actions into a browser-safe absolute URL.
+      return new URL(payload.url, window.location.href).toString();
+    }
+
+    function announceReadyToHost() {
+      // Ready message that lets the parent Wix page know the widget is available.
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ type: CHATBOT_READY_TYPE }, "*");
+      }
+    }
+
+    function handleHostMessage(event) {
+      // Host message handler that records when the parent page is ready for open-page actions.
+      const data = event?.data || {};
+      if (data.type === HOST_READY_TYPE) {
+        hostBridgeReady = true;
+      }
+    }
+
+    function openWithFallback(payload) {
+      // Fallback open that still works even if the parent-page bridge is not available.
+      const targetUrl = buildActionUrl(payload);
+      saveState();
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function openAction(action) {
+      // Action handler that opens pages either through the host bridge or directly in a new tab.
+      if (!action || action.type !== "OPEN_URL" || !action.payload?.url) {
+        return;
+      }
+      const payload = {
+        ...action.payload,
+        target_url: buildActionUrl(action.payload)
+      };
+      if (window.parent && window.parent !== window) {
+        if (!hostBridgeReady) {
+          // Short wait that gives the Wix host time to complete the ready handshake before the fallback runs.
+          announceReadyToHost();
+          window.setTimeout(() => {
+            if (hostBridgeReady) {
+              window.parent.postMessage({ type: HOST_OPEN_TYPE, payload }, "*");
+              return;
+            }
+            openWithFallback(payload);
+          }, 180);
+          return;
+        }
+        window.parent.postMessage({ type: HOST_OPEN_TYPE, payload }, "*");
+        return;
+      }
+      openWithFallback(payload);
+    }
+
+    async function sendMessage(text) {
+      // Main send flow that renders the user message, calls the API, and then renders the reply.
+      const message = (text || "").trim();
+      if (!message || isLoading) {
+        return;
+      }
+
+      appendMessage(message, "user");
+      input.value = "";
+      setBusyState(true);
+      showLoadingBubble();
+
+      try {
+        // API request that sends the current session id and message to the backend chat endpoint.
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            session_id: sessionId(),
+            message
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        hideLoadingBubble();
+        appendMessage(data.reply || "I could not find an answer.", "bot", data);
+        if (Array.isArray(data.actions)) {
+          // Backend actions are handled after the reply is rendered so the transcript stays complete.
+          data.actions.forEach(openAction);
+        }
+      } catch (error) {
+        hideLoadingBubble();
+        // Fallback error message shown when the API cannot be reached.
+        appendMessage("I could not reach the chatbot service. Please try again.", "bot");
+      } finally {
+        setBusyState(false);
+      }
+    }
+
+    function openPanel(options = {}) {
+      // Panel open helper that shows the welcome message only when the transcript is still empty.
+      panel.classList.add("open");
+      launcher.style.display = "none";
+      announceReadyToHost();
+      if (!messages.childNodes.length && options.showWelcome !== false) {
+        appendMessage(
+          "Hello! I can help you find information about BF4A, guide you, summarise and open pages for you or quiz you! Here are some examples of topics and questions you can ask:",
+          "bot",
+          {
+            quick_replies: [
+              "What programmes do you have?",
+              "Contact",
+              "Quiz me",
+              "Open the vacancies page",
+              "About BF4A",
+              "Donate",
+              "Register"
+            ]
+          }
+        );
+      }
+      saveState();
+      input.focus();
+    }
+
+    function closePanel() {
+      // Panel close helper that hides the chat window and keeps the current state saved.
+      panel.classList.remove("open");
+      launcher.style.display = "inline-flex";
+      saveState();
+    }
+
+    function restoreState() {
+      // Restore step that rebuilds the previous transcript and reopens the panel if needed.
+      const raw = localStorage.getItem(STATE_KEY);
+      if (!raw) {
+        return;
+      }
+      try {
+        const parsed = JSON.parse(raw);
+        transcript = Array.isArray(parsed?.transcript) ? parsed.transcript : [];
+        transcript.forEach((entry) => {
+          appendMessage(entry.text || "", entry.role || "bot", entry.response || null, { persist: false });
+        });
+        if (parsed?.isOpen) {
+          openPanel({ showWelcome: false });
+        }
+      } catch (error) {
+        // Reset that clears invalid saved state instead of breaking the widget startup.
+        transcript = [];
+      }
+    }
+
+    // Event bindings that connect the launcher, form, and host bridge to the widget logic.
+    launcher.addEventListener("click", () => {
+      openPanel();
+    });
+
+    closeButton.addEventListener("click", () => {
+      closePanel();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendMessage(input.value);
+    });
+
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage(input.value);
+      }
+    });
+
+    window.addEventListener("message", handleHostMessage);
+    restoreState();
+    announceReadyToHost();
+  </script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+﻿text,label
+what number do i call to register,REGISTER_CALL
+phone number to register my child,REGISTER_CALL
+register by phone,REGISTER_CALL
+sign up over the phone,REGISTER_CALL
+who do i call to sign up for a programme,REGISTER_CALL
+speak to someone to register,REGISTER_CALL
+phone number for registrations,REGISTER_CALL
+call to book a place,REGISTER_CALL
+who do i call to book a slot,REGISTER_CALL
+call to join holiday clubs,REGISTER_CALL
+call to sign up for holiday club,REGISTER_CALL
+who do i call to sign up for send support,REGISTER_CALL
+phone to register for tutoring,REGISTER_CALL
+registration phone number,REGISTER_CALL
+office number to register interest,REGISTER_CALL
+ring the office to register interest,REGISTER_CALL
+who do i ring to register,REGISTER_CALL
+parents phone number to register,REGISTER_CALL
+call and register my interest,REGISTER_CALL
+help me register over the phone,REGISTER_CALL
+call to find out how to sign up,REGISTER_CALL
+call to ask about joining a programme,REGISTER_CALL
+who do i call to ask about signing up,REGISTER_CALL
+phone number to enrol,REGISTER_CALL
+call to arrange registration,REGISTER_CALL
+call to register for an activity,REGISTER_CALL
+
+what are you,ABOUT_CHATBOT
+who are you,ABOUT_CHATBOT
+what is this chatbot,ABOUT_CHATBOT
+what is this bot,ABOUT_CHATBOT
+what are you for,ABOUT_CHATBOT
+what do you do,ABOUT_CHATBOT
+what can you do,ABOUT_CHATBOT
+what can you help me with,ABOUT_CHATBOT
+how can you help me,ABOUT_CHATBOT
+what can i ask you,ABOUT_CHATBOT
+what kind of questions can i ask,ABOUT_CHATBOT
+what is your purpose,ABOUT_CHATBOT
+what is your functionality,ABOUT_CHATBOT
+what are your functions,ABOUT_CHATBOT
+what can this chatbot help with,ABOUT_CHATBOT
+how does this chatbot work,ABOUT_CHATBOT
+tell me about yourself,ABOUT_CHATBOT
+tell me what you can do,ABOUT_CHATBOT
+are you a real person,ABOUT_CHATBOT
+are you a human,ABOUT_CHATBOT
+help,ABOUT_CHATBOT
+chatbot help,ABOUT_CHATBOT
+bot help,ABOUT_CHATBOT
+
+history of bf4a,HISTORY_BACKGROUND
+bf4a history,HISTORY_BACKGROUND
+your history,HISTORY_BACKGROUND
+background of bf4a,HISTORY_BACKGROUND
+bf4a background,HISTORY_BACKGROUND
+how did bf4a start,HISTORY_BACKGROUND
+when did bf4a start,HISTORY_BACKGROUND
+when was bf4a founded,HISTORY_BACKGROUND
+when were you founded,HISTORY_BACKGROUND
+when did bright futures 4 all start,HISTORY_BACKGROUND
+how did bright futures 4 all begin,HISTORY_BACKGROUND
+where did bf4a begin,HISTORY_BACKGROUND
+what is the story behind bf4a,HISTORY_BACKGROUND
+tell me your history,HISTORY_BACKGROUND
+tell me about your background,HISTORY_BACKGROUND
+tell me about your history,HISTORY_BACKGROUND
+explain your history,HISTORY_BACKGROUND
+explain your background,HISTORY_BACKGROUND
+who is the founder,HISTORY_BACKGROUND
+who is the founder of bf4a,HISTORY_BACKGROUND
+origin of bf4a,HISTORY_BACKGROUND
+how long have you been running,HISTORY_BACKGROUND
+when did the charity start,HISTORY_BACKGROUND
+how was bf4a created,HISTORY_BACKGROUND
+who invented bf4a,HISTORY_BACKGROUND
+who founded bf4a,HISTORY_BACKGROUND
+who is the founder,HISTORY_BACKGROUND
+who started bf4a,HISTORY_BACKGROUND
+
+register online,REGISTER_FORM
+register my interest,REGISTER_FORM
+how do i register,REGISTER_FORM
+how can i register,REGISTER_FORM
+how can i apply,REGISTER_FORM
+where can i apply,REGISTER_FORM
+how do i apply,REGISTER_FORM
+apply,REGISTER_FORM
+where can i register,REGISTER_FORM
+i want to register,REGISTER_FORM
+register me please,REGISTER_FORM
+how to register for a program,REGISTER_FORM
+register for bf4a,REGISTER_FORM
+register for classes,REGISTER_FORM
+register for activities,REGISTER_FORM
+can i register now,REGISTER_FORM
+registration form,REGISTER_FORM
+open register interest form,REGISTER_FORM
+send sign up form,REGISTER_FORM
+online registration form,REGISTER_FORM
+fill out registration form,REGISTER_FORM
+sign up for a programme form,REGISTER_FORM
+sign up through the form,REGISTER_FORM
+apply online,REGISTER_FORM
+application form,REGISTER_FORM
+submit my details online,REGISTER_FORM
+submit my details form,REGISTER_FORM
+enquiry form,REGISTER_FORM
+open enquiry form,REGISTER_FORM
+enquire about a programme,REGISTER_FORM
+holiday clubs registration online,REGISTER_FORM
+holiday clubs sign up form,REGISTER_FORM
+send support registration form,REGISTER_FORM
+tutoring registration form,REGISTER_FORM
+register my child online,REGISTER_FORM
+parent sign up form,REGISTER_FORM
+family sign up form,REGISTER_FORM
+open registration form,REGISTER_FORM
+open the register link,REGISTER_FORM
+show interest in a specific programme form,REGISTER_FORM
+register interest for a programme,REGISTER_FORM
+find info,REGISTER_FORM
+find information,REGISTER_FORM
+find more information,REGISTER_FORM
+where can i find information,REGISTER_FORM
+where can i find more information,REGISTER_FORM
+where can i find info,REGISTER_FORM
+find programme information,REGISTER_FORM
+find information about a programme,REGISTER_FORM
+find info about classes,REGISTER_FORM
+find info about activities,REGISTER_FORM
+i need more information,REGISTER_FORM
+i want more information,REGISTER_FORM
+can i get more information,REGISTER_FORM
+how can i get more information,REGISTER_FORM
+where can i get more information,REGISTER_FORM
+ask a question,REGISTER_FORM
+i want to ask a question,REGISTER_FORM
+where can i ask a question,REGISTER_FORM
+how can i ask a question,REGISTER_FORM
+ask about a programme,REGISTER_FORM
+ask about classes,REGISTER_FORM
+ask about activities,REGISTER_FORM
+make an enquiry,REGISTER_FORM
+send an enquiry,REGISTER_FORM
+i want to enquire,REGISTER_FORM
+how do i enquire,REGISTER_FORM
+how can i enquire,REGISTER_FORM
+where can i enquire,REGISTER_FORM
+enquire online,REGISTER_FORM
+enquire here,REGISTER_FORM
+enquire about classes,REGISTER_FORM
+enquire about activities,REGISTER_FORM
+enquire about holiday clubs,REGISTER_FORM
+enquire about tutoring,REGISTER_FORM
+enquire about send support,REGISTER_FORM
+contact about a programme,REGISTER_FORM
+contact about classes,REGISTER_FORM
+contact about activities,REGISTER_FORM
+send my details,REGISTER_FORM
+leave my details,REGISTER_FORM
+leave an enquiry,REGISTER_FORM
+submit an enquiry,REGISTER_FORM
+submit a question,REGISTER_FORM
+submit my question online,REGISTER_FORM
+complete the enquiry form,REGISTER_FORM
+complete the registration form,REGISTER_FORM
+fill in the enquiry form,REGISTER_FORM
+fill in the registration form,REGISTER_FORM
+show me the registration form,REGISTER_FORM
+show me the enquiry form,REGISTER_FORM
+open the sign up form,REGISTER_FORM
+open the application form,REGISTER_FORM
+where is the registration form,REGISTER_FORM
+where is the enquiry form,REGISTER_FORM
+how do i sign up,REGISTER_FORM
+how can i sign up,REGISTER_FORM
+where can i sign up,REGISTER_FORM
+sign me up,REGISTER_FORM
+i want to sign up,REGISTER_FORM
+
+hello,HELLO
+hi,HELLO
+hey,HELLO
+good morning,HELLO
+good afternoon,HELLO
+good evening,HELLO
+hello there,HELLO
+hi there,HELLO
+hii,HELLO
+hey there,HELLO
+morning,HELLO
+afternoon,HELLO
+evening,HELLO
+how are you,HELLO
+
+goodbye,GOODBYE
+bye,GOODBYE
+see you later,GOODBYE
+thanks bye,GOODBYE
+talk later,GOODBYE
+catch you later,GOODBYE
+bye bye,GOODBYE
+good night,GOODBYE
+thanks goodbye,GOODBYE
+done now bye,GOODBYE
+that is all thanks bye,GOODBYE
+
+contact you,CONTACT_INFO
+contact,CONTACT_INFO
+contact details,CONTACT_INFO
+get in touch,CONTACT_INFO
+how can i contact you,CONTACT_INFO
+how do i contact you,CONTACT_INFO
+how can i get in touch,CONTACT_INFO
+how do i get in touch,CONTACT_INFO
+open contact page,CONTACT_INFO
+take me to contact page,CONTACT_INFO
+show contact page,CONTACT_INFO
+where can i find your contact details,CONTACT_INFO
+email address,CONTACT_INFO
+contact email,CONTACT_INFO
+email,CONTACT_INFO
+email adress,CONTACT_INFO
+gmail,CONTACT_INFO
+your gmail,CONTACT_INFO
+your email,CONTACT_INFO
+what is your email,CONTACT_INFO
+what is your email address,CONTACT_INFO
+do you have an email address,CONTACT_INFO
+what email can i contact,CONTACT_INFO
+can you give me your contact details,CONTACT_INFO
+can i email you,CONTACT_INFO
+how can i email you,CONTACT_INFO
+what email should i use,CONTACT_INFO
+phone number,CONTACT_INFO
+telephone number,CONTACT_INFO
+office number,CONTACT_INFO
+contact number,CONTACT_INFO
+call the office,CONTACT_INFO
+what is your phone number,CONTACT_INFO
+can i get your phone number,CONTACT_INFO
+how can i call you,CONTACT_INFO
+what number can i call,CONTACT_INFO
+what is the office phone number,CONTACT_INFO
+what is the contact number,CONTACT_INFO
+address,CONTACT_INFO
+location,CONTACT_INFO
+office location,CONTACT_INFO
+where are you located,CONTACT_INFO
+where are you based,CONTACT_INFO
+where is your office,CONTACT_INFO
+where is your organisation based,CONTACT_INFO
+what is your address,CONTACT_INFO
+what is your office address,CONTACT_INFO
+what is the charity address,CONTACT_INFO
+what is bf4a address,CONTACT_INFO
+where can i find you,CONTACT_INFO
+where are your offices,CONTACT_INFO
+do you have other locations,CONTACT_INFO
+what other locations do you have,CONTACT_INFO
+do you operate in other locations,CONTACT_INFO
+are you based anywhere else,CONTACT_INFO
+what areas do you operate in,CONTACT_INFO
+what areas do you support,CONTACT_INFO
+when are you open,CONTACT_INFO
+what are your opening hours,CONTACT_INFO
+what are your opening times,CONTACT_INFO
+what time do you open,CONTACT_INFO
+what time do you close,CONTACT_INFO
+opening hours,CONTACT_INFO
+opening times,CONTACT_INFO
+closing time,CONTACT_INFO
+days open,CONTACT_INFO
+are you open today,CONTACT_INFO
+open today,CONTACT_INFO
+open now,CONTACT_INFO
+open on saturday,CONTACT_INFO
+open on sunday,CONTACT_INFO
+when can i call,CONTACT_INFO
+best time to contact,CONTACT_INFO
+parents contact times,CONTACT_INFO
+
+donate,DONATE
+donate now,DONATE
+make a donation,DONATE
+donation page,DONATE
+donation link,DONATE
+donate online,DONATE
+support financially,DONATE
+contribute money,DONATE
+give money to the charity,DONATE
+how to contribute,DONATE
+open donate page,DONATE
+where is the donate page,DONATE
+donating to bf4a,DONATE
+gift aid donation,DONATE
+ways to donate,DONATE
+
+reports,REPORT_CASE_STUDY
+case studies,REPORT_CASE_STUDY
+read reports,REPORT_CASE_STUDY
+read case studies,REPORT_CASE_STUDY
+show reports,REPORT_CASE_STUDY
+show case studies,REPORT_CASE_STUDY
+impact reports,REPORT_CASE_STUDY
+progress reports,REPORT_CASE_STUDY
+programme results,REPORT_CASE_STUDY
+open reports page,REPORT_CASE_STUDY
+reports page,REPORT_CASE_STUDY
+case study page,REPORT_CASE_STUDY
+testimonials,REPORT_CASE_STUDY
+read testimonials,REPORT_CASE_STUDY
+show testimonials,REPORT_CASE_STUDY
+success stories,REPORT_CASE_STUDY
+success story,REPORT_CASE_STUDY
+case study,REPORT_CASE_STUDY
+impact stories,REPORT_CASE_STUDY
+programme stories,REPORT_CASE_STUDY
+feedback from parents,REPORT_CASE_STUDY
+feedback from students,REPORT_CASE_STUDY
+examples of impact,REPORT_CASE_STUDY
+examples of programmes,REPORT_CASE_STUDY
+bf4a impact,REPORT_CASE_STUDY
+bf4a progress,REPORT_CASE_STUDY
+bf4a reports,REPORT_CASE_STUDY
+bf4a case studies,REPORT_CASE_STUDY
+
+volunteering opportunities,VOLUNTEER_VACANCIES
+volunteer,VOLUNTEER_VACANCIES
+volunteer roles,VOLUNTEER_VACANCIES
+volunteer opportunities,VOLUNTEER_VACANCIES
+vacancies,VOLUNTEER_VACANCIES
+job vacancies,VOLUNTEER_VACANCIES
+open vacancies page,VOLUNTEER_VACANCIES
+work with you,VOLUNTEER_VACANCIES
+careers and volunteering,VOLUNTEER_VACANCIES
+open volunteer page,VOLUNTEER_VACANCIES
+projects and vacancies,VOLUNTEER_VACANCIES
+
+your team,THE_TEAM
+meet the team,THE_TEAM
+team page,THE_TEAM
+open team page,THE_TEAM
+who runs the organisation,THE_TEAM
+trustees,THE_TEAM
+trustees page,THE_TEAM
+show trustees,THE_TEAM
+staff members,THE_TEAM
+leadership team,THE_TEAM
+see your team,THE_TEAM
+tell me about your team,THE_TEAM
+
+therapy and mentors,THERAPY_MENTORS
+therapy support,THERAPY_MENTORS
+mentoring support,THERAPY_MENTORS
+do you offer therapy and mentors,THERAPY_MENTORS
+do you offer therapy and mentoring,THERAPY_MENTORS
+do you offer mentoring,THERAPY_MENTORS
+do you offer mentors,THERAPY_MENTORS
+do you offer therapists,THERAPY_MENTORS
+do you provide therapy,THERAPY_MENTORS
+do you provide mentoring,THERAPY_MENTORS
+tutoring and mentoring support,THERAPY_MENTORS
+mentors and therapists,THERAPY_MENTORS
+therapists and mentors,THERAPY_MENTORS
+tutors mentors and therapists,THERAPY_MENTORS
+open tutors mentors therapists page,THERAPY_MENTORS
+tutoring mentoring and therapy,THERAPY_MENTORS
+i need mentoring support,THERAPY_MENTORS
+i need therapy support,THERAPY_MENTORS
+can you help with mentoring,THERAPY_MENTORS
+can you help with therapy,THERAPY_MENTORS
+therapy and mentoring services,THERAPY_MENTORS
+mentoring and therapy services,THERAPY_MENTORS
+
+bf4a,ABOUT_BF4A
+bright futures 4 all,ABOUT_BF4A
+bright futures for all,ABOUT_BF4A
+bf4a charity,ABOUT_BF4A
+bf4a organisation,ABOUT_BF4A
+about bf4a,ABOUT_BF4A
+about bright futures 4 all,ABOUT_BF4A
+about bright futures for all,ABOUT_BF4A
+about the charity,ABOUT_BF4A
+about your charity,ABOUT_BF4A
+about your organisation,ABOUT_BF4A
+what is bf4a,ABOUT_BF4A
+what is bright futures 4 all,ABOUT_BF4A
+what does bf4a stand for,ABOUT_BF4A
+what does bright futures 4 all stand for,ABOUT_BF4A
+who are bright futures 4 all,ABOUT_BF4A
+who is bf4a,ABOUT_BF4A
+tell me about bf4a,ABOUT_BF4A
+tell me about bright futures 4 all,ABOUT_BF4A
+tell me about bright futures for all,ABOUT_BF4A
+tell me about your organisation,ABOUT_BF4A
+tell me about your charity,ABOUT_BF4A
+explain bf4a,ABOUT_BF4A
+explain bright futures 4 all,ABOUT_BF4A
+explain what bf4a does,ABOUT_BF4A
+what does bf4a do,ABOUT_BF4A
+what does bright futures 4 all do,ABOUT_BF4A
+what do you do as a charity,ABOUT_BF4A
+what is your purpose,ABOUT_BF4A
+what is your mission,ABOUT_BF4A
+what is your vision,ABOUT_BF4A
+what does your charity do,ABOUT_BF4A
+what does bf4a do for the community,ABOUT_BF4A
+what services does bf4a offer,ABOUT_BF4A
+what programmes does bf4a run,ABOUT_BF4A
+what programmes does bright futures 4 all offer,ABOUT_BF4A
+what kind of organisation is bf4a,ABOUT_BF4A
+who runs bf4a,ABOUT_BF4A
+who founded bf4a,ABOUT_BF4A
+who founded bright futures 4 all,ABOUT_BF4A
+who started bright futures 4 all,ABOUT_BF4A
+who created bf4a,ABOUT_BF4A
+when was bf4a founded,ABOUT_BF4A
+when was bright futures 4 all founded,ABOUT_BF4A
+what organisation is bf4a,ABOUT_BF4A
+what is bright futures 4 all charity,ABOUT_BF4A
+what does bright futures 4 all do as a charity,ABOUT_BF4A
+what is bright futures 4 all organisation,ABOUT_BF4A
+
+what do you do,PROGRAMMES
+what do you help with,PROGRAMMES
+what support do you provide,PROGRAMMES
+what help do you offer,PROGRAMMES
+what help is available,PROGRAMMES
+who do you support,PROGRAMMES
+who is this for,PROGRAMMES
+what services do you offer,PROGRAMMES
+what kind of services do you offer,PROGRAMMES
+what range of services do you offer,PROGRAMMES
+what services do you provide,PROGRAMMES
+what services are available,PROGRAMMES
+what support services do you offer,PROGRAMMES
+what support services do you provide,PROGRAMMES
+what programmes do you offer,PROGRAMMES
+what programmes do you run,PROGRAMMES
+what programmes are available,PROGRAMMES
+what projects do you run,PROGRAMMES
+what projects do you offer,PROGRAMMES
+what projects are available,PROGRAMMES
+what activities do you offer,PROGRAMMES
+what activities do you run,PROGRAMMES
+what activities are available,PROGRAMMES
+what services does bf4a offer,PROGRAMMES
+what services does bright futures 4 all offer,PROGRAMMES
+what does bright futures 4 all offer,PROGRAMMES
+what does bf4a provide,PROGRAMMES
+what support programmes do you run,PROGRAMMES
+what services and activities do you offer,PROGRAMMES
+what services and programmes do you run,PROGRAMMES
+what support and activities do you provide,PROGRAMMES
+what activities and programmes do you offer for children,PROGRAMMES
+what services and activities does bright futures 4 all offer,PROGRAMMES
+what range of services and programmes do you offer,PROGRAMMES
+what services projects and programmes do you run,PROGRAMMES
+what services projects and activities do you offer,PROGRAMMES
+what programmes services and activities are available,PROGRAMMES
+what events do you have,PROGRAMMES
+what events do you run,PROGRAMMES
+what events do you offer,PROGRAMMES
+do you have events,PROGRAMMES
+do you run events,PROGRAMMES
+what kind of events do you have,PROGRAMMES
+what events are available,PROGRAMMES
+tell me about your events,PROGRAMMES
+what events do you have for children,PROGRAMMES
+what events do you have for young people,PROGRAMMES
+what activities and events do you run,PROGRAMMES
+what programmes and events do you offer,PROGRAMMES
+what age groups do you support,PROGRAMMES
+what ages do you support,PROGRAMMES
+what age range do you support,PROGRAMMES
+what age is this for,PROGRAMMES
+what ages is this for,PROGRAMMES
+who can join,PROGRAMMES
+who can attend,PROGRAMMES
+who can take part,PROGRAMMES
+who can use your services,PROGRAMMES
+who are your programmes for,PROGRAMMES
+who are your activities for,PROGRAMMES
+who are your services for,PROGRAMMES
+is my child eligible,PROGRAMMES
+can my child join,PROGRAMMES
+do you support children,PROGRAMMES
+do you support teenagers,PROGRAMMES
+do you support families,PROGRAMMES
+what age group are your programmes for,PROGRAMMES
+what ages can attend,PROGRAMMES
+how old do you need to be,PROGRAMMES
+are your services free,PROGRAMMES
+do you offer free services,PROGRAMMES
+do families have to pay,PROGRAMMES
+do parents have to pay,PROGRAMMES
+do i have to pay,PROGRAMMES
+how much does it cost,PROGRAMMES
+how much do your programmes cost,PROGRAMMES
+what are your fees,PROGRAMMES
+is there a fee,PROGRAMMES
+is it free to attend,PROGRAMMES
+is it free to join,PROGRAMMES
+are your programmes free,PROGRAMMES
+are your activities free,PROGRAMMES
+are your services free,PROGRAMMES
+what after school activities do you offer,PROGRAMMES
+what after school clubs do you offer,PROGRAMMES
+do you run after school activities,PROGRAMMES
+do you run after school clubs,PROGRAMMES
+what programmes do you run after school,PROGRAMMES
+what services do you offer after school,PROGRAMMES
+what activities do you run after school,PROGRAMMES
+what clubs do you run after school,PROGRAMMES
+
+curriculum,CURRICULUM
+your curriculum,CURRICULUM
+tell me about curriculum,CURRICULUM
+explain curriculum,CURRICULUM
+curriculum information,CURRICULUM
+open curriculum section,CURRICULUM
+homeschooling curriculum,CURRICULUM
+curriculum details,CURRICULUM
+curriculum page,CURRICULUM
+curriculum link,CURRICULUM
+
+yes,OTHER
+no,OTHER
+not really,OTHER
+thanks,OTHER
+thank you,OTHER
+i don't understand,OTHER
+what is bf4a,OTHER
+what does bf4a stand for,OTHER
+tell me about bf4a,OTHER
+tell me about your mission,OTHER
+what is your mission,OTHER
+describe your mission,OTHER
+what range of services do you offer,OTHER
+what services do you offer,OTHER
+what after school activities do you offer,OTHER
+explain holiday clubs,OTHER
+how do holiday clubs work,OTHER
+are holiday clubs free,OTHER
+who is eligible for holiday clubs,OTHER
+tell me about homeschooling support,OTHER
+what is send support,OTHER
+do you help children with additional needs,OTHER
+tell me your history,OTHER
+when did bf4a start,OTHER
+define gift aid,OTHER
+what is gift aid,OTHER
+how does gift aid work,OTHER
+how can you support my child,OTHER
+what can you help with,OTHER
+do you host any workshops,OTHER
+do you host workshops,OTHER
+do you run workshops,OTHER
+do you offer workshops,OTHER
+what workshops do you host,OTHER
+what workshops do you run,OTHER
+what workshops do you offer,OTHER
+tell me about workshops,OTHER
+do you have workshops,OTHER
+are there any workshops,OTHER

@@ -1,0 +1,66 @@
+[
+  { "query": "hello", "expected_label": "HELLO" },
+  { "query": "hi", "expected_label": "HELLO" },
+  { "query": "good morning", "expected_label": "HELLO" },
+
+  { "query": "what is bf4a", "expected_label": "ABOUT_BF4A" },
+  { "query": "tell me about bright futures 4 all", "expected_label": "ABOUT_BF4A" },
+  { "query": "what does bf4a do", "expected_label": "ABOUT_BF4A" },
+  { "query": "what is your purpose", "expected_label": "ABOUT_BF4A" },
+
+  { "query": "who are you", "expected_label": "ABOUT_CHATBOT" },
+  { "query": "what is this chatbot", "expected_label": "ABOUT_CHATBOT" },
+  { "query": "who is this chatbot", "expected_label": "ABOUT_CHATBOT" },
+
+  { "query": "how do i register", "expected_label": "REGISTER_FORM" },
+  { "query": "where is the registration form", "expected_label": "REGISTER_FORM" },
+  { "query": "can i register online", "expected_label": "REGISTER_FORM" },
+
+  { "query": "what is your email address", "expected_label": "CONTACT_INFO" },
+  { "query": "what are your contact details", "expected_label": "CONTACT_INFO" },
+  { "query": "how can i contact you", "expected_label": "CONTACT_INFO" },
+
+  { "query": "how can i donate", "expected_label": "DONATE" },
+  { "query": "where can i donate", "expected_label": "DONATE" },
+  { "query": "how do i donate", "expected_label": "DONATE" },
+
+  { "query": "tell me about therapy and mentors", "expected_label": "THERAPY_MENTORS" },
+  { "query": "do you offer therapy", "expected_label": "THERAPY_MENTORS" },
+  { "query": "is mentoring available", "expected_label": "THERAPY_MENTORS" },
+
+  { "query": "where can i volunteer", "expected_label": "VOLUNTEER_VACANCIES" },
+  { "query": "do you have vacancies", "expected_label": "VOLUNTEER_VACANCIES" },
+  { "query": "volunteer opportunities", "expected_label": "VOLUNTEER_VACANCIES" },
+
+  { "query": "what programmes do you have", "expected_label": "PROGRAMMES" },
+  { "query": "what activities do you offer", "expected_label": "PROGRAMMES" },
+  { "query": "what programmes do you offer", "expected_label": "PROGRAMMES" },
+
+  { "query": "where can i read your reports, case studies", "expected_label": "REPORT_CASE_STUDY" },
+  { "query": "where can i read your reports", "expected_label": "REPORT_CASE_STUDY" },
+  { "query": "case studies and reports", "expected_label": "REPORT_CASE_STUDY" },
+
+  { "query": "tell me about the team", "expected_label": "THE_TEAM" },
+  { "query": "who is on the team", "expected_label": "THE_TEAM" },
+  { "query": "team and trustees", "expected_label": "THE_TEAM" },
+
+  { "query": "what is your curriculum", "expected_label": "CURRICULUM" },
+  { "query": "tell me about your curriculum", "expected_label": "CURRICULUM" },
+  { "query": "curriculum details", "expected_label": "CURRICULUM" },
+
+  { "query": "what is your history, background", "expected_label": "HISTORY_BACKGROUND" },
+  { "query": "tell me about history and background", "expected_label": "HISTORY_BACKGROUND" },
+  { "query": "where can i find your history", "expected_label": "HISTORY_BACKGROUND" },
+
+  { "query": "goodbye", "expected_label": "GOODBYE" },
+  { "query": "bye", "expected_label": "GOODBYE" },
+  { "query": "see you later", "expected_label": "GOODBYE" },
+
+  { "query": "do you offer workshops", "expected_label": "OTHER" },
+  { "query": "what is gift aid", "expected_label": "OTHER" },
+  { "query": "what are your newsletters about", "expected_label": "OTHER" },
+  { "query": "do you sell concert tickets", "expected_label": "OTHER" },
+  { "query": "can you book me a hotel", "expected_label": "OTHER" },
+  { "query": "what is quantum physics", "expected_label": "OTHER" },
+  { "query": "where can i park nearby", "expected_label": "OTHER" }
+]
